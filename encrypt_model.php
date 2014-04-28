@@ -44,14 +44,14 @@ class Encrypt_model extends CI_Model{
 		$str = '';
 		switch($type){
 			case 1: 
-					$str = md5( $password );
-					break;
+				$str = md5( $password );
+				break;
 			case 2: 
-					$str = sha1( $password );
-					break;
+				$str = sha1( $password );
+				break;
 			case 3: 
-					$str = sha1( md5( base64_encode( $password ) ) ); 
-					break;
+				$str = sha1( md5( base64_encode( $password ) ) ); 
+				break;
 			default: $str = base64_encode($password); 
 					break;
 		}
